@@ -122,14 +122,14 @@ This section records the testing carried out before the prototype is presented o
 
 | Test area | What will be checked | Test date | Result | Notes / fixes |
 |---|---|---|---|---|
-| Login & authentication | Valid and invalid login attempts; correct dashboard displayed for each role. | 26/11/2026 | [Pass] | Three seeded users can log in properly, bounced back when it is not correct credentials. Register also works. Tenant and agent are directed to correct dashboard accordingly |
+| Login & authentication | Valid and invalid login attempts; correct dashboard displayed for each role. | 26/11/2026 | [PASS] | Three seeded users can log in properly, bounced back when it is not correct credentials. Register also works. Tenant and agent are directed to correct dashboard accordingly |
 | Tenant issue submission | Required fields, successful issue creation, automatic `OPEN` status and date logged. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Tenant access control | Tenant can view their own requests but cannot access another tenant's requests. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Agent access control | Agent can view and manage only the requests assigned to them. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Priority & status workflow | Agent can assign priority and move an issue through `OPEN` → `IN_PROGRESS` → `RESOLVED` in the intended order. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Resolution history | `dateResolved` and `lastUpdated` are recorded correctly; resolved issues are read-only. | 26/11/2026 | [Pass] | Fix issue #13, now dates on dateRosolved and dateUpdated are working correctly |
+| Resolution history | `dateResolved` and `lastUpdated` are recorded correctly; resolved issues are read-only. | 26/11/2026 | [PASS] | Fix issue #13, now dates on dateRosolved and dateUpdated are working correctly |
 | Input validation & security | Missing or invalid input is handled; role restrictions work; database input is handled safely. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Usability & compatibility | Navigation, readability and layout on the browsers and devices selected for testing. | 26/11/2026 | [Pass] | Check all button and links, all are working properly. Missing field is also handled. |
+| Usability & compatibility | Navigation, readability and layout on the browsers and devices selected for testing. | 26/11/2026 | [PASS] | Check all button and links, all are working properly. Missing field is also handled. |
 
 ### AI-Generated Code Review Log
 
