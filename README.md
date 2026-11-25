@@ -153,7 +153,7 @@ Hosting: GitHub Pages
 Not all OWASP categories are equally applicable to this prototype. Testing therefore focuses on relevant security risks categories rather than attempting to assess every category exhaustively.
 
 | OWASP Category | Review date | Review notes/outcome |
-|---|---|---|---|
+|---|---|---|
 | A01 – Broken Access Control | 26/11/2026 | Verify that users can only access and perform actions permitted by their assigned roles. We have two tenants and one agents. Each tenant cannot see the other's issue and tenant can't access agent's dashboard. |
 | A02 – Security Misconfiguration | 25/11/2026 | We are using Supabase that has Row Level Security (RLS) enabled where each table/row modification is constrained by rules which is enabled by default. The Supabase access also only limited to the three developers. |
 | A05 – Injection | 26/11/2026 | The login page is tested agaisnt common injection of "' OR '1'='1" and it successfully blocked the log in. |
@@ -226,12 +226,15 @@ AI tools may be used to support implementation and debugging. Any AI-generated c
 ## 👤 About the Creator
 
 **CHANDRA MULIAWAN - DHE26010008**
+
 served as the Project Manager and Application Testing Lead for this prototype, overseeing project coordination, development progress, and software testing. Interested in developing practical solutions that simplify property maintenance workflows and improve communication between tenants, property agents, and maintenance teams.
 
 **JEFFERSON PARDO - DHE260100xx**
+
 [Add a short 2–3 sentence bio. You may include relevant study or professional background, technical interests, and your role in designing or developing this prototype.]
 
 **MANASA VIDYA - DHE260100xx**
+
 [Add a short 2–3 sentence bio. You may include relevant study or professional background, technical interests, and your role in designing or developing this prototype.]
 
 ---
