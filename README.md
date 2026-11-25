@@ -122,14 +122,14 @@ This section records the testing carried out before the prototype is presented o
 
 | Test area | What will be checked | Test date | Result | Notes / fixes |
 |---|---|---|---|---|
-| Login & authentication | Valid and invalid login attempts; correct dashboard displayed for each role. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
+| Login & authentication | Valid and invalid login attempts; correct dashboard displayed for each role. | 26/11/2026 | [Pass] | Three seeded users can log in properly, bounced back when it is not correct credentials. Register also works. Tenant and agent are directed to correct dashboard accordingly |
 | Tenant issue submission | Required fields, successful issue creation, automatic `OPEN` status and date logged. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Tenant access control | Tenant can view their own requests but cannot access another tenant's requests. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Agent access control | Agent can view and manage only the requests assigned to them. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Priority & status workflow | Agent can assign priority and move an issue through `OPEN` → `IN_PROGRESS` → `RESOLVED` in the intended order. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Resolution history | `dateResolved` and `lastUpdated` are recorded correctly; resolved issues are read-only. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
+| Resolution history | `dateResolved` and `lastUpdated` are recorded correctly; resolved issues are read-only. | 26/11/2026 | [Pass] | Fix issue #13, now dates on dateRosolved and dateUpdated are working correctly |
 | Input validation & security | Missing or invalid input is handled; role restrictions work; database input is handled safely. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Usability & compatibility | Navigation, readability and layout on the browsers and devices selected for testing. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
+| Usability & compatibility | Navigation, readability and layout on the browsers and devices selected for testing. | 26/11/2026 | [Pass] | Check all button and links, all are working properly. Missing field is also handled. |
 
 ### AI-Generated Code Review Log
 
@@ -141,13 +141,35 @@ AI-assisted code must be manually reviewed by a team member before it is merged 
 | [File, feature or component] | [Name] | [DD/MM/YYYY] | [Record findings and fixes] | [Approved / Further work required] |
 | [File, feature or component] | [Name] | [DD/MM/YYYY] | [Record findings and fixes] | [Approved / Further work required] |
 
+
+### OWASP TOP 10
+
+The following assessment uses the OWASP Top 10:2025 as its reference framework, prioritising vulnerabilities relevant to the application's architecture and functionality. The application uses:
+Frontend: HTML, CSS and JavaScript
+Authentication: Supabase Authentication
+Database: Supabase PostgreSQL
+Hosting: GitHub Pages
+
+Not all OWASP categories are equally applicable to this prototype. Testing therefore focuses on relevant security risks categories rather than attempting to assess every category exhaustively.
+
+| OWASP Category | Review date | Review notes/outcome |
+|---|---|---|---|
+| A01 – Broken Access Control | 26/11/2026 | Verify that users can only access and perform actions permitted by their assigned roles. We have two tenants and one agents. Each tenant cannot see the other's issue and tenant can't access agent's dashboard. |
+| A02 – Security Misconfiguration | 25/11/2026 | We are using Supabase that has Row Level Security (RLS) enabled where each table/row modification is constrained by rules which is enabled by default. The Supabase access also only limited to the three developers. |
+| A05 – Injection | 26/11/2026 | The login page is tested agaisnt common injection of "' OR '1'='1" and it successfully blocked the log in. |
+| A06 – Insecure Design | 25/11/2026 | Similar to A01, the design of the application is modular such that tenant's and agent's flow in different transition. Some of the design, for example date resolution logic, is automated by system where the date are not user based, but system based such that no date tampering possible hence the data integrity is kept.  |
+| A07 – Authentication Failures | 25/11/2026 | Using the three users, we erify that authentication and session management behave as expected. Invalid credentials blocking, log out, and the apps remember past data. |
+| A08 – Software or Data Integrity Failures | 26/11/2026 | Along with good Access Control and good Secure Design, unauthorised users cannot manipulate application data through modified requests hence kept the data integrity. |
+| A10 – Mishandling of Exceptional Conditions | 26/11/2026 | The application, through help of Supabase default design, handles invalid inputs, unexpected states and failed operations; and able to log and send out error message to the front end as well. |
+
+
 ### Testing Summary
 
-- **Testing period:** [Start date – end date]
-- **Final test date:** [DD/MM/YYYY]
-- **Outstanding issues:** [List unresolved issues, or write “None” after checking]
-- **Release / presentation decision:** [Ready / Not ready / Ready with known limitations]
-- **Reviewed by:** [Name(s)]
+- **Testing period:** 25/11/2026 - 02/12/2026
+- **Final test date:** 02/12/2026
+- **Outstanding issues:** None, pending v2 of the prototype design.
+- **Release / presentation decision:** v1 of the prototype is now released at ....
+- **Reviewed by:** Chandra Muliawan, Jefferson Pardo, and Manasa Vidya
 
 ---
 
@@ -203,8 +225,13 @@ AI tools may be used to support implementation and debugging. Any AI-generated c
 
 ## 👤 About the Creator
 
-**[Creator Name]**
+**CHANDRA MULIAWAN - DHE26010008**
+served as the Project Manager and Application Testing Lead for this prototype, overseeing project coordination, development progress, and software testing. Interested in developing practical solutions that simplify property maintenance workflows and improve communication between tenants, property agents, and maintenance teams.
 
+**JEFFERSON PARDO - DHE260100xx**
+[Add a short 2–3 sentence bio. You may include relevant study or professional background, technical interests, and your role in designing or developing this prototype.]
+
+**MANASA VIDYA - DHE260100xx**
 [Add a short 2–3 sentence bio. You may include relevant study or professional background, technical interests, and your role in designing or developing this prototype.]
 
 ---
