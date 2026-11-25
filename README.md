@@ -217,7 +217,16 @@ The diagrams below describe the planned structure and behaviour of the current p
 
 Shows the main classes, their attributes, relationships and issue-related enumerations.
 
-![Property Management Tracker – Class Diagram](docs/uml/property-management-class-diagram.png)
+![Property Management Tracker – Class Diagram - 1](images/property_management_class_diagram_p1.png)
+
+![Property Management Tracker – Class Diagram - 2](images/property_management_class_diagram_p2.png)
+
+![Property Management Tracker – Sequence Diagram - 1](images/property_management_sequence_diagrams_p1.png)
+
+![Property Management Tracker – Sequence Diagram - 2](images/property_management_sequence_diagrams_p2.png)
+
+![Property Management Tracker – Sequence Diagram - 3](images/property_management_sequence_diagrams_p3.png)
+
 
 ### Sequence Diagrams
 
