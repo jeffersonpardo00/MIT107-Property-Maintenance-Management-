@@ -221,12 +221,6 @@ Shows the main classes, their attributes, relationships and issue-related enumer
 
 ![Property Management Tracker – Class Diagram - 2](images/property_management_class_diagram_p2.png)
 
-![Property Management Tracker – Sequence Diagram - 1](images/property_management_sequence_diagrams_p1.png)
-
-![Property Management Tracker – Sequence Diagram - 2](images/property_management_sequence_diagrams_p2.png)
-
-![Property Management Tracker – Sequence Diagram - 3](images/property_management_sequence_diagrams_p3.png)
-
 
 ### Sequence Diagrams
 
@@ -234,14 +228,14 @@ Illustrate the main interactions between users, the portal, the backend and the 
 
 #### 1. Log a Maintenance Issue
 
-![Log Maintenance Issue Sequence Diagram](docs/uml/sequence-log-maintenance-issue.png)
+![Property Management Tracker – Sequence Diagram - 1](images/property_management_sequence_diagrams_p1.png)
 
 #### 2. View Ticket Status
 
-![View Ticket Status Sequence Diagram](docs/uml/sequence-view-ticket-status.png)
+![Property Management Tracker – Sequence Diagram - 2](images/property_management_sequence_diagrams_p2.png)
 
 #### 3. Review and Update an Issue
 
-![Review and Update Issue Sequence Diagram](docs/uml/sequence-review-update-issue.png)
+![Property Management Tracker – Sequence Diagram - 3](images/property_management_sequence_diagrams_p3.png)
 
 ---
