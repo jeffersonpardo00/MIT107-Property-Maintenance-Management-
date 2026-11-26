@@ -136,8 +136,8 @@ This section records the testing carried out before the prototype is presented o
 | Test area | What will be checked | Test date | Result | Notes / fixes |
 |---|---|---|---|---|
 | Login & authentication | Valid and invalid login attempts; correct dashboard displayed for each role. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Tenant issue submission | Required fields, successful issue creation, automatic `OPEN` status and date logged. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
-| Tenant access control | Tenant can view their own requests but cannot access another tenant's requests. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
+| Tenant issue submission | Required fields, successful issue creation, automatic `OPEN` status and date logged. | [27/11/2026] | [Pending] | [Validation, successful issue creation, automatic OPEN status, and automatic date logging all worked correctly. Minor observation: property address field remains empty despite being read-only.] |
+| Tenant access control | Tenant can view their own requests but cannot access another tenant's requests. | [27/11/2026] | [ Pass ] | [All tests passed successfully. Tenants could access and view only their own maintenance requests and were unable to view requests belonging to other tenants.] |
 | Agent access control | Agent can view and manage only the requests assigned to them. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Priority & status workflow | Agent can assign priority and move an issue through `OPEN` → `IN_PROGRESS` → `RESOLVED` in the intended order. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
 | Resolution history | `dateResolved` and `lastUpdated` are recorded correctly; resolved issues are read-only. | [DD/MM/YYYY] | [Pending / Pass / Fail] | [Add notes] |
